@@ -11,7 +11,7 @@ function run () {
     // Looks automatically for env for authentication when using aws sync
     // Env can be found in the workflow
     const s3Uri = `s3://${bucket}`;
-    exec.exec(`aws sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
+    exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
 
 
     // Output the website's url
